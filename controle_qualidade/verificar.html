@@ -6,16 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
     <style>
-        html [
-        height: 100%;
-        ]
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            height: 100%;
         }
         header, footer {
             background: linear-gradient(90deg, #1f1c54, #04061b);
@@ -68,21 +64,33 @@
     </style>
 </head>
 <body>
-    <header>
+    <header> 
         <a href="../menu-empresas/index.html"><h1>Controle de Qualidade</h1></a>
     </header>
-<body>
 
-    <div class="tudo">
-        <div class="container">
-            <h1>Informar ID do Lote</h1>
-            <form id="formID">
-                <label for="idLote">ID do Lote:</label>
-                <input type="text" id="idLote" name="idLote" required>
-                <a href="verificar.html" id="add-product" class="button">Proximo</a>
+    <main>
+        <section>
+            <h2>Registrar Produtos com Defeito</h2>
+            <form id="defeitoForm">
+                <label for="quantidade">Quantidade de Produtos com Defeito:</label>
+                <input type="number" id="quantidade" name="quantidade" min="1" required>
+
+                <label for="defeito">Tipo de Defeito:</label>
+                <select id="defeito" name="defeito" required>
+                    <option value="">Selecione...</option>
+                    <option value="Falha de Fabricação">Falha de Fabricação</option>
+                    <option value="Problema de Montagem">Problema de Montagem</option>
+                    <option value="Defeito de Design">Defeito de Design</option>
+                    <option value="Outro">Outro</option>
+                </select>
+
+                <div id="outroDefeitoContainer" style="display:none;">
+                    <label for="outroDefeito">Descreva o Problema:</label>
+                    <textarea id="outroDefeito" name="outroDefeito"></textarea>
+                </div>
+
+                <a href="tabela.html" id="add-product" class="button">Proximo</a>
             </form>
-        </div>
-    </div>
-    
+        </section>
 </body>
 </html>

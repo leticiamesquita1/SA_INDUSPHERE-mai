@@ -6,16 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
     <style>
-        html [
-        height: 100%;
-        ]
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            height: 100%;
         }
         header, footer {
             background: linear-gradient(90deg, #1f1c54, #04061b);
@@ -73,15 +69,30 @@
     </header>
 <body>
 
-    <div class="tudo">
-        <div class="container">
-            <h1>Informar ID do Lote</h1>
-            <form id="formID">
-                <label for="idLote">ID do Lote:</label>
-                <input type="text" id="idLote" name="idLote" required>
-                <a href="verificar.html" id="add-product" class="button">Proximo</a>
-            </form>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.menu').classList.toggle('active');
+        }
+    </script>
+
+    <div class="container">
+        <div class="header">
+            <div class="search-container">
+                
+                <input type="text" id="search" placeholder="Pesquisar...">
+                
+            </div>
         </div>
+        <table class="product-table">
+            <thead>
+                <tr>
+                    <th>Erro</th>
+                    <th>Quantidade</th>
+                </tr>
+            </thead>
+            <tbody id="product-list">
+            </tbody>
+        </table>
     </div>
     
 </body>

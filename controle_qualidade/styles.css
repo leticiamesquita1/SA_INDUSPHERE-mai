@@ -1,162 +1,141 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+header {
+    width: 100%;
 }
-
-.container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 8px;
-}
-
-h1 {
-    text-align: center;
-    color: #333;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-input, textarea, select {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    padding: 10px;
-    border: none;
-    background: #333;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #555;
-}
-
-button + button {
-    margin-left: 10px;
-}
-
-p {
-    text-align: center;
-}
-
-
-
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 100%;
-    max-width: 500px;
-}
-
-h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-bottom: 10px;
-    text-align: left;
-}
-
-input, select, button {
-    margin-bottom: 20px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-button[type="button"] {
-    background-color: #008CBA;
-}
-
-button[type="button"]:hover {
-    background-color: #007bb5;
-}
-
-.erro-item {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-}
-
-.erro-item label {
-    text-align: left;
-}
-
-/* Header Principal */
-.headerprincipal {
-    background: linear-gradient(90deg, #1f1c54, #04061b);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    position: fixed; /* Fix the header at the top */
-    top: 0;
-    left: 0;
-    z-index: 1000; /* Ensure it stays above other content */
-    height: 100px;
-}
-
-.headerprincipal h1 {
+    font-family: 'Roboto', sans-serif;
+    background: #03073a;
     margin: 0;
     color: #fff;
-    font-size: 40px;
+    
 }
 
-.headerprincipal a {
+.container {
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    width: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-container {
+    width: 80%;
+    
+}
+
+#search {
+    padding: 10px 10px;
+    font-size: 16px;
+    width: 95%;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+#search:focus {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.search-container .fas {
+    transform: translateY(-50%);
+    color: #aaa;
+
+}
+
+#add-product {
+    background: linear-gradient(45deg, #00bfff, #1e90ff);
+    color: white;
+    border: none;
+    text-align: center;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+}
+
+#add-product:hover {
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.8);
+}
+
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.product-table th, .product-table td {
+    padding: 12px;
+    border: 1px solid rgb(255, 255, 255);
+    text-align: left;
+}
+
+.product-table th {
+    background: rgba(255, 255, 255, 0.2);
+    
+}
+
+.product-table tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.edit, .delete {
+    padding: 8px 16px;
+    margin: 0 2px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit {
+    background-color: #17a2b8;
+    color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.edit:hover {
+    background-color: #138496;
+}
+
+.delete {
+    background-color: #dc3545;
+    color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.delete:hover {
+    background-color: #c82333;
+}
+
+a {
+    color: #fff;
     text-decoration: none;
 }
 
+h2 {
+    text-align: center;
+}
 
+h1 {
+    text-align: initial;
+}
+
+.container h1 {
+    text-align: center;
+}
+
+.tudo {
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+}
